@@ -52,7 +52,7 @@ a {
 
 a:hover {
   background-color: var(--lightgray);
-  color: var(--black);
+	color: var(--blue);
 }
 
 .tags_title {

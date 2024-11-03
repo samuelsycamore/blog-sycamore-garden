@@ -1,8 +1,6 @@
 ---
 import BaseHead from "../components/BaseHead.astro";
-import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
-import Tags from "../components/Tags.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
 import getTags from "../scripts/getTags";
 
@@ -15,11 +13,11 @@ const tags = getTags(posts);
 <html lang="en-us">
 	<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
 	<body>
-		<Header title={SITE_TITLE} />
 		<main>
 			404: Page not found
-
-			<Tags tags={tags} all />
+			<p>
+				<a href="/">Go back home</a>
+			</p>
 		</main>
 		<Footer />
 	</body>
