@@ -1,11 +1,11 @@
 {
-	"name": "@cassidoo/blahg",
+	"name": "work-sycamore-garden",
 	"version": "0.0.1",
 	"private": true,
 	"scripts": {
-		"dev": "npx tinacms dev -c 'astro dev'",
+		"dev": "astro dev",
 		"start": "astro dev",
-		"build": "tinacms build && astro build",
+		"build": "astro build",
 		"preview": "astro preview",
 		"astro": "astro"
 	},
@@ -15,9 +15,5 @@
 		"astro": "^4.15.2",
 		"prettier": "^3.3.3",
 		"prettier-plugin-astro": "^0.14.1"
-	},
-	"dependencies": {
-		"@tinacms/cli": "^1.6.2",
-		"tinacms": "^2.2.0"
 	}
 }
