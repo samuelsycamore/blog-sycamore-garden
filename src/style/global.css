@@ -1,6 +1,6 @@
 /*
   The CSS in this style tag is based off of Bear Blog's default CSS.
-  https://github.com/HermanMartinus/bearblog/blob/297026a877bc2ab2b3bdfbd6b9f7961c350917dd/templates/styles/blog/default.css
+  https://github.com/HermanMartinus/bearblog/blob/287026a877bc2ab2b3bdfbd6b9f7961c350917dd/templates/styles/blog/default.css
   License MIT: https://github.com/HermanMartinus/bearblog/blob/master/LICENSE.md
  */
 :root {
@@ -13,7 +13,7 @@
   --gray: #6b6b6b;
   --lightgray: #eeeeee;
   --darkgray: #bfbfbf;
-	--blue: #002afa;
+  --blue: #002afa;
 }
 
 ::selection {
@@ -35,82 +35,24 @@ body {
 code {
   font-family: '"iA Writer Mono"', monospace;
 }
-h1,
 strong,
 b {
   color: var(--black);
 }
-
-/* body.dark-mode,
-body.dark-mode button,
-body.dark-mode h1,
-body.dark-mode .go-home,
-button.dark-mode,
-button.dark-mode button {
-	background: var(--black);
-	color: var(--white);
-}
-body.dark-mode nav {
-	background: var(--transblack);
-} */
-
-.tag-title {
-  font-weight: 400;
-  color: var(--black);
-}
-
-/* @media (prefers-color-scheme: dark) {
-	::selection {
-		background-color: #0f0f0f;
-		color: var(--white);
-	}
-	:root {
-		--gray: #a4a4a4;
-	}
-	html,
-	body,
-	body button,
-	body h1,
-	body strong,
-	body b,
-	body em,
-	body blockquote,
-	body .go-home {
-		background: var(--black);
-		color: var(--white);
-	}
-	body nav {
-		background: var(--transblack);
-	}
-	body code {
-		background-color: var(--moretranswhite);
-	}
-	body a {
-		color: var(--white);
-	}
-	body .tag {
-		color: var(--gray);
-	}
-	.tag-title {
-		color: var(--white);
-	}
-} */
 
 header {
   position: relative;
 }
 
 a {
-  color: var(--black);
+  color: var(--blue);
   text-decoration: none;
   border-radius: 2px;
 }
 
 a:hover {
-  background-color: var(
-    --lightgray
-  );
-	color: var(--blue);
+  background-color: var(--lightgray);
+  color: var(--black);
 }
 
 .tags_title {
@@ -139,14 +81,18 @@ nav {
   background-color: var(--transwhite);
   -webkit-backdrop-filter: blur(3px);
   backdrop-filter: blur(3px);
-	font-size: 16px;
-	font-weight: 700;
-	padding: 10px;
-	margin-bottom: 50px;
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 36px;
+  padding: 10px 0;
+}
+
+nav a {
+  color: var(--black);
 }
 
 hr {
-  border-top: 1px solid var(--gray);
+  border-top: 1px solid var(--lightgray);
   margin: 1rem 0;
 }
 
@@ -160,8 +106,8 @@ ul.tags-list {
   margin: 0;
 }
 
-.post .title {
-  font-size: 1.3em;
+.post-title {
+  font-weight: 700px;
 }
 
 .tags {
@@ -170,14 +116,11 @@ ul.tags-list {
   justify-content: center;
 }
 .tag {
-  display: inline-block;
-  margin-right: 20px;
   color: var(--black);
   font-size: 0.8rem;
 }
 .tag:hover {
   cursor: pointer;
-  font-weight: bold;
 }
 
 textarea {
@@ -189,7 +132,7 @@ input {
 }
 main,
 content {
-  line-height: 29px;
+  line-height: 28px;
 }
 table {
   width: 100%;
@@ -216,14 +159,27 @@ blockquote {
   margin: 0px;
   font-style: italic;
 }
-
-h1, h2, h3, h4, h5, h6 {
-	font-family: "Work Sans", sans-serif;
-	font-weight: 900;
-	line-height: 1.5;
-	-webkit-font-smoothing: antialiased;
-	color: var(--black);
-	margin-bottom: 0px;
+h1 {
+  font-weight: 900;
+}
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Work Sans", sans-serif;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  color: var(--black);
+  margin-bottom: 0px;
 }
 .center {
   text-align: center;
@@ -237,12 +193,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .header-name {
-	font-size: 14.5px;
-	font-weight: 700;
+  font-size: 14.5px;
+  font-weight: 700;
 }
 
 article :not(.article-title, .blog-post-subtitle, .blog-post-title) {
-  line-height: 29px;
+  line-height: 28px;
 }
 
 .article-title {

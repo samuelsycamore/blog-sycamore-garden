@@ -2,39 +2,30 @@
 import BaseHead from "../components/BaseHead.astro";
 import Footer from "../components/Footer.astro";
 import HomePosts from "../components/HomePosts.astro";
-import Tags from "../components/Tags.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
-import getTags from "../scripts/getTags";
 const posts = await Astro.glob("../posts/*.md");
-
-const tags = getTags(posts);
 ---
 
 <!doctype html>
 <html lang="en-us">
 	<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
 	<body>
-		<header>
-			<div class="header-section">
-				<div class="header-frame">
-					<h1 class="header-name"><a href="/">Sam Sycamore</a></h1>
-					<p>{SITE_DESCRIPTION}</p>
-				</div>
-			</div>
-		</header>
+		<nav>
+			<a href="/">{SITE_TITLE}</a>
+		</nav>
+		<p>{SITE_DESCRIPTION}</p>
+		<hr />
 		<main>
-			<h3>Recent posts</h3>
+			<p>Recent posts</p>
 
 			<HomePosts allPosts={posts} />
+			<hr />
 
-			<p class="center">
+			<p>
 				You can also <a href="https://blog.sycamore.garden/rss.xml">
 					subscribe with RSS.
 				</a>
 			</p>
-			<br />
-
-			<Tags tags={tags} all />
 		</main>
 		<Footer />
 	</body>

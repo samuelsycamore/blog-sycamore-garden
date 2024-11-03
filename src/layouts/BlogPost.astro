@@ -3,7 +3,7 @@ import BaseHead from "../components/BaseHead.astro";
 import Footer from "../components/Footer.astro";
 import Tags from "../components/Tags.astro";
 import getTags from "../scripts/getTags";
-import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
+import { SITE_TITLE } from "../config";
 
 const posts = await Astro.glob("../posts/*.md");
 const allTags = getTags(posts);
@@ -37,14 +37,14 @@ if (updated) {
 	<BaseHead title={title} description={description} />
 	<body>
 		<nav>
-			<a href="/">Sycamore Garden Blog</a>
+			<a href="/">{SITE_TITLE}</a>
 		</nav>
 		<main>
 			<article>
 				{heroImage && <img width={720} height={360} src={heroImage} alt="" />}
 				<h1 class="article-title">{title}</h1>
 				{updated ?
-					<span><time>{added}</time>, last updated on <time>{updated}</time></span>
+					<span>Published on <time>{added}</time>, last updated on <time>{updated}</time></span>
 					:
 					<span>{added && <time>{added}</time>}</span>
 				}
@@ -55,7 +55,6 @@ if (updated) {
 				</div>
 			</article>
 		</main>
-		<Tags tags={allTags} all />
 		<Footer />
 	</body>
 </html>

@@ -1,6 +1,5 @@
 ---
 import BaseHead from "../../components/BaseHead.astro";
-import Header from "../../components/Header.astro";
 import Footer from "../../components/Footer.astro";
 import Post from "../../components/Post.astro";
 
@@ -44,7 +43,6 @@ let sortedPosts = tag.sort(
 <html lang="en-us">
 	<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
 	<body>
-		<Header />
 		<main>
 			<content>
 				<h3>Posts tagged with "{currentTag}"</h3>
