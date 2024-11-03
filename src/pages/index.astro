@@ -1,12 +1,10 @@
 ---
 import BaseHead from "../components/BaseHead.astro";
-import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import HomePosts from "../components/HomePosts.astro";
 import Tags from "../components/Tags.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
 import getTags from "../scripts/getTags";
-
 const posts = await Astro.glob("../posts/*.md");
 
 const tags = getTags(posts);
@@ -16,7 +14,14 @@ const tags = getTags(posts);
 <html lang="en-us">
 	<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
 	<body>
-		<Header />
+		<header>
+			<div class="header-section">
+				<div class="header-frame">
+					<h1 class="header-name"><a href="/">Sam Sycamore</a></h1>
+					<p>{SITE_DESCRIPTION}</p>
+				</div>
+			</div>
+		</header>
 		<main>
 			<h3>Recent posts</h3>
 

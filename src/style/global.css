@@ -13,6 +13,7 @@
   --gray: #6b6b6b;
   --lightgray: #eeeeee;
   --darkgray: #bfbfbf;
+	--blue: #002afa;
 }
 
 ::selection {
@@ -26,7 +27,7 @@ body {
   background-color: var(--white);
   word-wrap: break-word;
   overflow-wrap: break-word;
-  color: var(--black);
+  color: var(--gray);
   font-family: "Work Sans", sans-serif;
   font-size: 14.5px;
 }
@@ -102,15 +103,14 @@ header {
 a {
   color: var(--black);
   text-decoration: none;
-  padding-right: 4px;
-  padding-left: 4px;
   border-radius: 2px;
 }
 
 a:hover {
   background-color: var(
-    --linkhover
-  ); /* Change to the color you want on hover */
+    --lightgray
+  );
+	color: var(--blue);
 }
 
 .tags_title {
@@ -131,25 +131,6 @@ a:hover {
   border-radius: 2px;
 }
 
-.navigation_title {
-  color: var(--black);
-  text-decoration: none;
-  background-color: transparent;
-  /* padding-right: 4px;
-	padding-left: 4px; */
-  /* border-radius: 2px */
-}
-
-.navigation_title:hover {
-  color: var(--black);
-  text-decoration: none;
-  background-color: transparent;
-  font-weight: bold;
-  /* padding-right: 4px;
-	padding-left: 4px; */
-  /* border-radius: 2px */
-}
-
 nav {
   position: sticky;
   top: 0;
@@ -158,15 +139,10 @@ nav {
   background-color: var(--transwhite);
   -webkit-backdrop-filter: blur(3px);
   backdrop-filter: blur(3px);
-  margin-top: 15px;
-  margin-bottom: 15px;
-}
-
-nav a {
-  margin: 10px 0;
-}
-nav a:not(:last-child) {
-  padding: 0 12px 0 0;
+	font-size: 16px;
+	font-weight: 700;
+	padding: 10px;
+	margin-bottom: 50px;
 }
 
 hr {
@@ -181,7 +157,7 @@ ul.tags-list {
 }
 
 .post {
-  margin: 0 0 30px 0;
+  margin: 0;
 }
 
 .post .title {
@@ -241,18 +217,14 @@ blockquote {
   font-style: italic;
 }
 
-h1 {
-  font-weight: 400;
+h1, h2, h3, h4, h5, h6 {
+	font-family: "Work Sans", sans-serif;
+	font-weight: 900;
+	line-height: 1.5;
+	-webkit-font-smoothing: antialiased;
+	color: var(--black);
+	margin-bottom: 0px;
 }
-
-h2 {
-  font-weight: 400;
-}
-
-h3 {
-  /* text-align: center; */
-}
-
 .center {
   text-align: center;
 }
@@ -262,6 +234,11 @@ h3 {
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
+}
+
+.header-name {
+	font-size: 14.5px;
+	font-weight: 700;
 }
 
 article :not(.article-title, .blog-post-subtitle, .blog-post-title) {
