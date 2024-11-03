@@ -5,7 +5,6 @@ import Footer from "../components/Footer.astro";
 import HomePosts from "../components/HomePosts.astro";
 import Tags from "../components/Tags.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
-import { Content as About } from "./about.md";
 import getTags from "../scripts/getTags";
 
 const posts = await Astro.glob("../posts/*.md");
@@ -17,18 +16,14 @@ const tags = getTags(posts);
 <html lang="en-us">
 	<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
 	<body>
-		<Header title={SITE_TITLE} />
+		<Header />
 		<main>
-			<About />
-
-			<br />
-
 			<h3>Recent posts</h3>
 
 			<HomePosts allPosts={posts} />
 
 			<p class="center">
-				You can also <a href="https://blahg.netlify.app/rss.xml">
+				You can also <a href="https://blog.sycamore.garden/rss.xml">
 					subscribe with RSS.
 				</a>
 			</p>
